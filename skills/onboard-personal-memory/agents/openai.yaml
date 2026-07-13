@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onboard Personal Memory"
+  short_description: "Build portable AI personal memory"
+  default_prompt: "Use $onboard-personal-memory to interview me and draft portable personalised memory for my AI agents."
