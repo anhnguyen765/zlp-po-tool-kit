@@ -2,6 +2,14 @@
 
 Personal Codex skills and agent workflow assets.
 
+## Agents
+
+### user-interview-copilot
+
+Workspace Agent package for a Product Owner interview assistant that supports three phases: pre-interview preparation, live voice/transcript follow-up support, and post-interview synthesis into Confluence-ready Markdown.
+
+Package: `agents/user-interview-copilot/`
+
 ## Skills
 
 ### onboard-personal-memory

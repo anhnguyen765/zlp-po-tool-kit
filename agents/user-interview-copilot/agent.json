@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "agent_id": "agt_6a574ef5ac1881919534aabf83c5fc61",
+  "name": "User Interview Copilot",
+  "description": "Prepares, supports, and synthesizes user interviews",
+  "tagline": "Quality-first user interview copilot for POs",
+  "category": "productivity",
+  "icon": {
+    "name": "scout",
+    "color": "green"
+  },
+  "status": "draft",
+  "runtime_notes": [
+    "Voice-first behaviour depends on direct voice support in the ChatGPT or Workspace Agent runtime.",
+    "When voice is unavailable, use pasted transcript chunks or notes.",
+    "No external apps, files, memory, Slack deployment, or API channel are required for v1."
+  ],
+  "instruction_file": "instructions.md",
+  "templates": {
+    "pre_interview_plan": "templates/pre-interview-plan.md",
+    "interview_synthesis": "templates/interview-synthesis.md"
+  },
+  "starter_prompts": [
+    {
+      "title": "Prepare Interview",
+      "short_description": "Build a Confluence-ready interview plan",
+      "icon": "checklist",
+      "prompt": "Help me prepare a user interview. Start by asking for the research objective, interviewee type, persona/context, product or workflow area, interview mode, assumptions to test, and timebox. Then produce the pre-interview plan in Markdown for Confluence."
+    },
+    {
+      "title": "Live Follow-ups",
+      "short_description": "Suggest next questions from voice or transcript",
+      "icon": "microphone",
+      "prompt": "I am conducting an interview now. Treat my voice input or pasted transcript chunks as live interview material. Suggest one neutral follow-up question at a time, explain why it matters, and tell me what signal to listen for."
+    },
+    {
+      "title": "Clean Transcript",
+      "short_description": "Turn rough notes into a working script",
+      "icon": "audiowave",
+      "prompt": "Convert my rough voice-derived notes or transcript into a clean working interview script with speaker labels where possible. Then identify follow-up opportunities without inventing missing evidence."
+    },
+    {
+      "title": "Synthesize Interview",
+      "short_description": "Extract insights, pain points, JTBD, and opportunities",
+      "icon": "summary",
+      "prompt": "Synthesize this interview transcript into a Confluence-ready Markdown report. Include key insights, pain points, evidence and quotes, jobs-to-be-done, opportunities, suggestions for the PO, and open questions. Distinguish evidence from inference."
+    }
+  ]
+}
+
