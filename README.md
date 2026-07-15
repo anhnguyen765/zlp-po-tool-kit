@@ -1,14 +1,14 @@
 # ZLP PO Tool Kit
 
-Personal Codex skills and agent workflow assets.
+Product Owner tools, agent instructions, and workflow assets.
 
 ## Agents
 
-### user-interview-copilot
+### User Interview Copilot
 
-Workspace Agent package for a Product Owner interview assistant that supports three phases: pre-interview preparation, live voice/transcript follow-up support, and post-interview synthesis into Confluence-ready Markdown.
+ChatGPT agent instructions for a Product Owner interview copilot. The agent supports three phases: pre-interview preparation, live voice/transcript follow-up support, and post-interview synthesis into Confluence-ready Markdown.
 
-Package: `agents/user-interview-copilot/`
+Agent files: `agents/user-interview-copilot/`
 
 ## Skills
 

@@ -1,41 +1,71 @@
 # User Interview Copilot
 
-Workspace Agent package for a Product Owner interview assistant.
+User Interview Copilot is a ChatGPT agent for Product Owners who need to prepare, run, and synthesise quality-first user interviews.
 
-## Purpose
+## Who It Helps
 
-User Interview Copilot helps POs run quality-first user interviews across end users, internal operators, customer support teams, merchants, partners, and other stakeholders.
+Use this agent when interviewing:
 
-It supports three phases:
+- End users
+- Internal operators
+- Customer support teams
+- Merchants
+- Partners
+- Other product stakeholders
 
-1. Pre-interview preparation: clarify context, research objective, assumptions, interview mode, and produce a question list.
-2. During-interview support: use voice input where the runtime supports it, or transcript chunks otherwise, to suggest neutral follow-up questions.
-3. Post-interview synthesis: summarise transcript evidence into key insights, pain points, quotes/evidence, jobs-to-be-done, opportunities, PO suggestions, and open questions.
+## What The Agent Does
 
-## Files
+The agent supports three interview phases:
 
-- `agent.json`: versioned agent metadata and starter prompts.
-- `instructions.md`: full agent instructions for Workspace Agents.
-- `templates/pre-interview-plan.md`: Confluence-ready preparation output format.
-- `templates/interview-synthesis.md`: Confluence-ready synthesis output format.
+1. Pre-interview preparation: clarify interview context, research objective, interviewee type, assumptions, interview mode, and produce a structured question list.
+2. During-interview support: suggest neutral follow-up questions from direct voice input where available, or from pasted transcript chunks and notes.
+3. Post-interview synthesis: turn transcript evidence into key insights, pain points, evidence/quotes, jobs-to-be-done, opportunities, PO suggestions, and open questions.
 
-## Live Agent
+## How To Use
 
-- Draft agent name: `User Interview Copilot`
-- Draft agent ID: `agt_6a574ef5ac1881919534aabf83c5fc61`
-- Status: draft created, not published from Codex
+Start with one of these requests:
 
-## Voice Behaviour
+- "Help me prepare a user interview for [persona/context]."
+- "I am conducting an interview now. Suggest follow-up questions from this transcript."
+- "Clean this rough interview transcript into a working script."
+- "Synthesize this interview transcript into a Confluence-ready report."
 
-The agent is written as voice-first, but this repo package does not configure a dedicated voice channel. It relies on the ChatGPT/Workspace Agent runtime to provide direct voice input. When voice is unavailable, the agent should accept pasted transcript chunks or notes.
+## Inputs To Provide
 
-## Publish Checklist
+For the best result, provide:
 
-Before publishing:
+- Product or workflow area
+- Interviewee type and persona/context
+- Research objective or PO decision the interview should inform
+- Interview mode: discovery, validation, usability, merchant/partner adoption, operational workflow, or mixed
+- Known assumptions or hypotheses
+- Interview timebox
+- Transcript, voice-derived notes, or raw interview notes for synthesis
 
-1. Review `instructions.md` for the expected interview quality bar.
-2. Confirm the starter prompts in `agent.json` match the desired PO workflow.
-3. Test one pre-interview preparation prompt.
-4. Test one live transcript chunk and confirm the agent suggests one concise follow-up.
-5. Test one post-interview transcript and confirm the synthesis separates evidence from inference.
+## Outputs
 
+The agent produces Markdown that can be pasted into Confluence:
+
+- Interview preparation plan
+- Research questions
+- Interview question list
+- Live follow-up suggestions
+- Clean working transcript/script
+- Interview synthesis report
+- Jobs-to-be-done
+- Opportunities and suggested PO next steps
+
+## Quality Principles
+
+- Ask neutral, non-leading questions.
+- Probe concrete behaviour, examples, trade-offs, workarounds, and pain.
+- Separate evidence from inference.
+- Do not fabricate quotes or transcript evidence.
+- Avoid overclaiming from one interview.
+- Tailor the interview to the interviewee type and research mode.
+
+## Agent Files
+
+- `instructions.md`: agent behaviour and workflow instructions.
+- `templates/pre-interview-plan.md`: preparation output format.
+- `templates/interview-synthesis.md`: synthesis output format.
